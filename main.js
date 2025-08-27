@@ -13,23 +13,33 @@ for (const btn of loveButtons) {
 
 let copyCount = document.querySelector(".copyCount").innerText;
 for (const btn of copyButtons) {
-  btn.addEventListener("click", async function () {
+  btn.addEventListener("click", function () {
+    const card = btn.closest(".card");
+    const number = card.querySelector(".number");
+    const text = number.innerText;
+
+    // Fallback copy using textarea
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
     try {
-      const card = btn.closest(".card");
-      const number = card.querySelector(".number");
-      const text = number.innerText;
-
-      await navigator.clipboard.writeText(text);
-      copyCount++;
-      document.querySelector(".copyCount").innerText = copyCount;
-
-      alert("Copied " + text);
+      const successful = document.execCommand('copy'); // copy text
+      if (successful) {
+        copyCount++;
+        document.querySelector(".copyCount").innerText = copyCount;
+        alert("Copied " + text);
+      } else {
+        alert("Copy failed!");
+      }
     } catch (err) {
-      console.error("Failed to copy: ", err);
-      alert("Failed to copy text");
+      console.error('Copy command failed:', err);
+      alert("Copy failed!");
     }
+    document.body.removeChild(textarea);
   });
 }
+
 
 let callCount = document.querySelector(".callCoin").innerText;
 for (const btn of callButtons) {
