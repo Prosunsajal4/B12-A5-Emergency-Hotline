@@ -18,28 +18,31 @@ for (const btn of copyButtons) {
     const number = card.querySelector(".number");
     const text = number.innerText;
 
-    // Fallback copy using textarea
     const textarea = document.createElement("textarea");
     textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.top = "-9999px";
     document.body.appendChild(textarea);
+    textarea.focus();
     textarea.select();
+
     try {
-      const successful = document.execCommand('copy'); // copy text
+      const successful = document.execCommand("copy");
       if (successful) {
         copyCount++;
         document.querySelector(".copyCount").innerText = copyCount;
         alert("Copied " + text);
       } else {
-        alert("Copy failed!");
+        alert("Failed to copy!");
       }
     } catch (err) {
-      console.error('Copy command failed:', err);
-      alert("Copy failed!");
+      console.error("Copy failed:", err);
+      alert("Failed to copy!");
     }
-    document.body.removeChild(textarea);
+
+    document.body.removeChild(textarea); // clean up
   });
 }
-
 
 let callCount = document.querySelector(".callCoin").innerText;
 for (const btn of callButtons) {
