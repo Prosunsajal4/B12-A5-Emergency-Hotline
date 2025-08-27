@@ -31,6 +31,14 @@ for (const btn of callButtons) {
     if (callCount > 0) {
       callCount -= 20;
       document.querySelector(".callCoin").innerText = callCount;
+      const card = btn.closest(".card");
+      const number = card.querySelector(".number");
+      const text = number.innerText;
+      alert("Calling " + card.querySelector("h1").innerText + " " + text);
+      const history = document.getElementsByClassName("call-history");
+      const name = card.querySelector("h1").innerText;
+      const time = new Date().toLocaleTimeString();
+      
     } else {
       alert("Not enough coins");
     }
