@@ -13,15 +13,21 @@ for (const btn of loveButtons) {
 
 let copyCount = document.querySelector(".copyCount").innerText;
 for (const btn of copyButtons) {
-  btn.addEventListener("click", function () {
-    copyCount++;
-    document.querySelector(".copyCount").innerText = copyCount;
-    const card = btn.closest(".card");
-    const number = card.querySelector(".number");
-    const text = number.innerText;
+  btn.addEventListener("click", async function () {
+    try {
+      const card = btn.closest(".card");
+      const number = card.querySelector(".number");
+      const text = number.innerText;
 
-    navigator.clipboard.writeText(text);
-    alert("Copied " + text);
+      await navigator.clipboard.writeText(text);
+      copyCount++;
+      document.querySelector(".copyCount").innerText = copyCount;
+
+      alert("Copied " + text);
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+      alert("Failed to copy text");
+    }
   });
 }
 
