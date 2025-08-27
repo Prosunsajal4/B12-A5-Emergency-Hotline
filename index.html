@@ -69,7 +69,7 @@
       </div>
     </banner>
     <main class="bg-[#f5fff6]">
-      <div class="w-11/12 mx-auto grid grid-cols-1 gap-8 py-8 md:grid-cols-12">
+      <div class="w-11/12 mx-auto grid grid-cols-1 gap-3 py-8 md:grid-cols-12">
         <div class="w-full md:col-span-9">
           <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <div class="card bg-base-100 shadow-sm bg-white p-5 rounded-lg">
@@ -517,17 +517,22 @@
             </div>
           </div>
         </div>
-        <div class="call-history md:col-span-3 w-full">
-          <div
-            class="bg-white p-5 rounded-lg shadow-sm flex justify-between items-center"
-          >
-            <h1><i class="fa-regular fa-clock"></i> Call History</h1>
+        <div
+          class="call-history md:col-span-3 w-full bg-white height-full rounded-lg shadow-sm max-h-[900px] overflow-y-auto"
+        >
+          <div class="p-5 flex justify-between items-center mb-1">
+            <h1 class="text-lg font-bold">
+              <i class="fa-regular fa-clock"></i> Call History
+            </h1>
             <button
-              class="btn text-white bg-green-600 w-1/3 clear-btn rounded-4xl"
+              id="clear-btn"
+              class="btn text-white bg-green-600 w-1/3 rounded-4xl"
             >
               Clear
             </button>
           </div>
+
+          <div id="history-entries" class="mx-2"></div>
         </div>
       </div>
     </main>
