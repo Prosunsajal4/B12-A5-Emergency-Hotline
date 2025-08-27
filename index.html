@@ -41,15 +41,15 @@
           class="flex flex-col justify-between gap-4 items-center md:flex-row"
         >
           <p class="bg-[#41FF6B1A] px-8 py-4 text-xl rounded-4xl font-bold">
-            <span>0</span> ❤️
+            <span class="loveCount">0</span> ❤️
           </p>
           <p class="bg-[#41FF6B1A] px-8 py-4 text-xl rounded-4xl font-bold">
-            <span>100</span> 🪙
+            <span class="callCoin">100</span> 🪙
           </p>
           <p
             class="bg-[#00A63E] px-8 py-4 text-xl rounded-4xl text-white font-bold"
           >
-            <span>0</span> Copy
+            <span class="copyCount">0</span> Copy
           </p>
         </div>
       </div>
@@ -69,8 +69,8 @@
       </div>
     </banner>
     <main class="bg-[#f5fff6]">
-      <div class="w-11/12 mx-auto grid grid-cols-12 gap-8 py-8">
-        <div class="col-span-9">
+      <div class="w-11/12 mx-auto grid grid-cols-1 gap-8 py-8 md:grid-cols-12">
+        <div class="w-full md:col-span-9">
           <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <div class="card bg-base-100 shadow-sm bg-white p-5 rounded-lg">
               <div class="flex text-center justify-between">
@@ -80,7 +80,7 @@
                   alt=""
                 />
                 <button
-                  class="btn bg-transparent border-none shadow-none text-base text-gray-600"
+                  class="btn bg-transparent border-none shadow-none text-base text-gray-600 love-btn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@
                   <p>National Emergency</p>
                 </div>
                 <div class="mt-2 mb-4">
-                  <h1 class="text-xl font-bold">999</h1>
+                  <h1 class="text-xl font-bold number">999</h1>
                   <p class="bg-gray-300 rounded-lg px-2 w-[40px]">All</p>
                 </div>
               </div>
@@ -129,7 +129,7 @@
                   alt=""
                 />
                 <button
-                  class="btn bg-transparent border-none shadow-none text-base text-gray-600"
+                  class="btn bg-transparent border-none shadow-none text-base text-gray-600 love-btn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -153,8 +153,8 @@
                   <p>Police</p>
                 </div>
                 <div class="mt-2 mb-4">
-                  <h1 class="text-xl font-bold">999</h1>
-                  <p class="bg-gray-300 rounded-lg px-2 w-[40px]">All</p>
+                  <h1 class="text-xl font-bold number">999</h1>
+                  <p class="bg-gray-300 rounded-lg px-2 w-[60px]">Police</p>
                 </div>
               </div>
               <div class="flex gap-2 justify-between">
@@ -178,7 +178,7 @@
                   alt=""
                 />
                 <button
-                  class="btn bg-transparent border-none shadow-none text-base text-gray-600"
+                  class="btn bg-transparent border-none shadow-none text-base text-gray-600 love-btn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -198,12 +198,12 @@
               </div>
               <div>
                 <div class="mt-4">
-                  <h1 class="text-xl tfont-bold">Ambulance Service</h1>
-                  <p>Ambulance</p>
+                  <h1 class="text-xl font-bold">Fire Service Number</h1>
+                  <p>Fire Service</p>
                 </div>
                 <div class="mt-2 mb-4">
-                  <h1 class="text-xl font-bold">999</h1>
-                  <p class="bg-gray-300 rounded-lg px-2 w-[40px]">All</p>
+                  <h1 class="text-xl font-bold number">999</h1>
+                  <p class="bg-gray-300 rounded-lg px-2 w-[40px]">Fire</p>
                 </div>
               </div>
               <div class="flex gap-2 justify-between">
@@ -227,7 +227,7 @@
                   alt=""
                 />
                 <button
-                  class="btn bg-transparent border-none shadow-none text-base text-gray-600"
+                  class="btn bg-transparent border-none shadow-none text-base text-gray-600 love-btn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -247,12 +247,12 @@
               </div>
               <div>
                 <div class="mt-4">
-                  <h1 class="text-xl font-bold">National Emergency Number</h1>
-                  <p>National Emergency</p>
+                  <h1 class="text-xl font-bold">Ambulance service</h1>
+                  <p>Ambulance</p>
                 </div>
                 <div class="mt-2 mb-4">
-                  <h1 class="text-xl font-bold">999</h1>
-                  <p class="bg-gray-300 rounded-lg px-2 w-[40px]">All</p>
+                  <h1 class="text-xl font-bold number">1994-999999</h1>
+                  <p class="bg-gray-300 rounded-lg px-2 w-[60px]">health</p>
                 </div>
               </div>
               <div class="flex gap-2 justify-between">
@@ -276,7 +276,7 @@
                   alt=""
                 />
                 <button
-                  class="btn bg-transparent border-none shadow-none text-base text-gray-600"
+                  class="btn bg-transparent border-none shadow-none text-base text-gray-600 love-btn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -296,12 +296,12 @@
               </div>
               <div>
                 <div class="mt-4">
-                  <h1 class="text-xl font-bold">National Emergency Number</h1>
-                  <p>National Emergency</p>
+                  <h1 class="text-xl font-bold">Women & Child Helpline</h1>
+                  <p>Women & Child Helpline</p>
                 </div>
                 <div class="mt-2 mb-4">
-                  <h1 class="text-xl font-bold">999</h1>
-                  <p class="bg-gray-300 rounded-lg px-2 w-[40px]">All</p>
+                  <h1 class="text-xl font-bold number">109</h1>
+                  <p class="bg-gray-300 rounded-lg px-2 w-[50px]">Help</p>
                 </div>
               </div>
               <div class="flex gap-2 justify-between">
@@ -325,7 +325,7 @@
                   alt=""
                 />
                 <button
-                  class="btn bg-transparent border-none shadow-none text-base text-gray-600"
+                  class="btn bg-transparent border-none shadow-none text-base text-gray-600 love-btn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -345,12 +345,12 @@
               </div>
               <div>
                 <div class="mt-4">
-                  <h1 class="text-xl font-bold">National Emergency Number</h1>
-                  <p>National Emergency</p>
+                  <h1 class="text-xl font-bold">Anti-Corruption Helpline</h1>
+                  <p>Anti-Corruption</p>
                 </div>
                 <div class="mt-2 mb-4">
-                  <h1 class="text-xl font-bold">999</h1>
-                  <p class="bg-gray-300 rounded-lg px-2 w-[40px]">All</p>
+                  <h1 class="text-xl font-bold number">106</h1>
+                  <p class="bg-gray-300 rounded-lg px-2 w-[50px]">Govt.</p>
                 </div>
               </div>
               <div class="flex gap-2 justify-between">
@@ -374,7 +374,7 @@
                   alt=""
                 />
                 <button
-                  class="btn bg-transparent border-none shadow-none text-base text-gray-600"
+                  class="btn bg-transparent border-none shadow-none text-base text-gray-600 love-btn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -394,12 +394,14 @@
               </div>
               <div>
                 <div class="mt-4">
-                  <h1 class="text-xl font-bold">National Emergency Number</h1>
-                  <p>National Emergency</p>
+                  <h1 class="text-xl font-bold">Electricity Helpline</h1>
+                  <p>Electricity Outage</p>
                 </div>
                 <div class="mt-2 mb-4">
-                  <h1 class="text-xl font-bold">999</h1>
-                  <p class="bg-gray-300 rounded-lg px-2 w-[40px]">All</p>
+                  <h1 class="text-xl font-bold number">16216</h1>
+                  <p class="bg-gray-300 rounded-lg px-2 w-[80px]">
+                    Electricity
+                  </p>
                 </div>
               </div>
               <div class="flex gap-2 justify-between">
@@ -423,7 +425,7 @@
                   alt=""
                 />
                 <button
-                  class="btn bg-transparent border-none shadow-none text-base text-gray-600"
+                  class="btn bg-transparent border-none shadow-none text-base text-gray-600 love-btn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -443,12 +445,12 @@
               </div>
               <div>
                 <div class="mt-4">
-                  <h1 class="text-xl font-bold">National Emergency Number</h1>
-                  <p>National Emergency</p>
+                  <h1 class="text-xl font-bold">Brac Helpline</h1>
+                  <p>Brac</p>
                 </div>
                 <div class="mt-2 mb-4">
-                  <h1 class="text-xl font-bold">999</h1>
-                  <p class="bg-gray-300 rounded-lg px-2 w-[40px]">All</p>
+                  <h1 class="text-xl font-bold number">16445</h1>
+                  <p class="bg-gray-300 rounded-lg px-2 w-[50px]">NGO</p>
                 </div>
               </div>
               <div class="flex gap-2 justify-between">
@@ -472,7 +474,7 @@
                   alt=""
                 />
                 <button
-                  class="btn bg-transparent border-none shadow-none text-base text-gray-600"
+                  class="btn bg-transparent border-none shadow-none text-base text-gray-600 love-btn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -492,12 +494,12 @@
               </div>
               <div>
                 <div class="mt-4">
-                  <h1 class="text-xl font-bold">National Emergency Number</h1>
-                  <p>National Emergency</p>
+                  <h1 class="text-xl font-bold">Bangladesh Railway Helpline</h1>
+                  <p>Bangladesh Railway Helpline</p>
                 </div>
                 <div class="mt-2 mb-4">
-                  <h1 class="text-xl font-bold">999</h1>
-                  <p class="bg-gray-300 rounded-lg px-2 w-[40px]">All</p>
+                  <h1 class="text-xl font-bold number">163</h1>
+                  <p class="bg-gray-300 rounded-lg px-2 w-[60px]">Travel</p>
                 </div>
               </div>
               <div class="flex gap-2 justify-between">
@@ -515,7 +517,7 @@
             </div>
           </div>
         </div>
-        <div class="col-span-3">
+        <div class="md:col-span-3 w-full">
           <div
             class="bg-white p-5 rounded-lg shadow-sm flex justify-between items-center"
           >
